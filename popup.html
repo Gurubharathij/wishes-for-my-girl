@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise</title>
+    <style>
+        body {
+            background-image: url('heart2.jpg'); /* Change to your image */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ffcc00;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Click the Button for a Surprise! 🎉</h2>
+        <button class="button" onclick="openSurprise()">Open Surprise</button>
+    </div>
+
+    <script>
+        function openSurprise() {
+            window.location.href = "surprise.html"; // Redirect to surprise page
+        }
+    </script>
+</body>
+</html>
