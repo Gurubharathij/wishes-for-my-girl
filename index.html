@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            background-image: url('heart1.jpg'); /* Change this to your image */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffcc00;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Your Brother's Date of Birth</h2>
+        <input type="text" id="password" placeholder="DD/MM/YYYY">
+        <br>
+        <button onclick="checkPassword()">Submit</button>
+        <p class="error" id="error-message"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "03/04/2005") {
+                window.location.href = "popup.html"; // Redirect to countdown page
+            } else {
+                document.getElementById("error-message").innerText = "enooda birthday date maradhu pocha unaku olunga podu.";
+            }
+        }
+    </script>
+</body>
+</html>
